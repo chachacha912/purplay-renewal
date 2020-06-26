@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 뷰포트 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Purplay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+<!--    <script src="js/pc_mob.js"></script>-->
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1><a href="index.html"><img src="images/logo.png" alt="퍼플레이"></a></h1>
+            <ul class="about">
+                <li><a href="#none"><img src="images/news.png" alt="공지사항"></a></li>
+                <li><a href="#none"><img src="images/purplay.png" alt="퍼플레이"></a></li>
+                <li><a href="#none"><img src="images/purzoom.png" alt="퍼줌"></a></li>
+                <li><a href="#none"><img src="images/letter.png" alt="뉴스레터"></a></li>
+            </ul>
+            <ul class="util">
+                <li><a href="#none"><img src="images/search.png" alt="검색">검색</a></li>
+                <li><a href="#none"><img src="images/browse.png" alt="탐색">탐색</a></li>
+                <li><a href="#none"><img src="images/login.png" alt="마이페이지">제이미</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="main">
+        <h2>비쥬얼 배너 영역</h2>
+        <div class="mv_wrap">
+            <ul id="mv_slide">
+                <li class="mv1 show">
+                    <div class="video_wrap">
+                        <video src="images/mv1.mp4" autoplay muted loop></video>
+                        <img src="images/gradient.png" alt="배경" class="gradient">
+                        <img src="images/wildflower.png" alt="들꽃영화상" class="wildflower">
+                    </div>
+                    <div class="text">
+                        <h3>2020년 들꽃영화상 수상<br>여성영화인 참여작품</h3>
+                        <p>마감일, 세마리, 나만 없는 집 등</p>
+                        <a href="#none">관련 영화 보기</a>
+                    </div>
+                </li>  
+                <li class="mv2">
+                    <img src="images/mv2.jpg" alt="겨털소녀 김붕어">
+                    <div class="text">
+                        <h3>있는 그대로의<br>내 몸 사랑하기</h3>
+                        <p>겨털소녀 김붕어, 비포 앤 애프터 등</p>
+                        <a href="#none">관련 영화 보기</a>
+                    </div>
+                </li> 
+                <li class="mv3">
+                    <div class="video_wrap">
+                        <video src="images/mv3.mp4" id="mv3_video" muted></video>
+                        <img src="images/gradient.png" alt="배경" class="gradient">
+                    </div>
+                    <div class="text">
+                        <h3>마음은 가볍게 여운은 길게~<br>500원의 행복</h3>
+                        <p>미쎄스 로맨스, 씽크, 비 내리는 여자 등</p>
+                        <a href="#none">관련 영화 보기</a>
+                    </div>
+                </li> 
+                <li class="mv4">
+                    <img src="images/mv4.jpg" alt="여름맞이 특별세일">
+                    <div class="text">
+                        <h3>더위를 날려줄<br>여름맞이 특별할인</h3>
+                        <p>여름, 옆길, 사빈과 아나 등</p>
+                        <a href="#none">관련 영화 보기</a>
+                    </div>
+                </li> 
+            </ul>
+            <ul id="mv_page"></ul>
+            <div class="pageani"><div class="ani"></div></div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </div>
+    </section>
+    <div id="cont">
+        <section class="movie_list movie_list1 wrap">
+            <h3>#<span>펖</span>NEW_새로 업로드된 작품<span class="emoji">✨</span><img src="images/more.png" alt="더보기"></h3>
+            <div class="movie_frame">
+                <ul class="movie_slide">
+                    <li class="m1"><a href="#none">
+                        <figure>
+                            <img src="images/movie1.jpg" alt="언프리티 영미">
+                        </figure>
+                        <div class="text">
+                            <h4>언프리티 영미</h4>
+                            <p class="info">
+                               <span class="nutshell">못생겨서 미안해yo!</span> 
+                               <span class="time">18분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m2"><a href="#none">
+                        <figure>
+                            <img src="images/movie2.jpg" alt="소설가 정연씨의 일일">
+                        </figure>
+                        <div class="text">
+                            <h4>소설가 정연씨의 일일</h4>
+                            <p class="info">
+                               <span class="nutshell">회사원 이치코로부터</span> 
+                               <span class="time">16분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie20.jpg" alt="할망바다"> 
+                        </figure>
+                        <div class="text">
+                            <h4>할망바다</h4>
+                            <p class="info">
+                               <span class="nutshell">바다의 커리어우먼</span> 
+                               <span class="time">5분</span>
+                            </p>
+                        </div>    
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m4"><a href="#none">
+                        <figure>
+                            <img src="images/movie3.jpg" alt="놀던 날">
+                        </figure>
+                        <div class="text">
+                            <h4>놀던 날</h4>
+                            <p class="info">
+                               <span class="nutshell">잘 됐으면 좋겠어, 우리</span> 
+                               <span class="time">26분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m5"><a href="#none">
+                        <figure>
+                            <img src="images/movie30.jpg" alt="잘돼가? 무엇이든">
+                        </figure>
+                        <div class="text">
+                            <h4>잘돼가? 무엇이든</h4>
+                            <p class="info">
+                               <span class="nutshell">나 이 회사 관둘거야</span> 
+                               <span class="time">36분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m6"><a href="#none">
+                        <figure>
+                            <img src="images/movie4.jpg" alt="마감일">
+                        </figure>
+                        <div class="text">
+                            <h4>마감일</h4>
+                            <p class="info">
+                               <span class="nutshell">슬기야 달려!</span> 
+                               <span class="time">28분</span>
+                            </p>
+                        </div>
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie10.jpg" alt="겨털소녀 김붕어">
+                        </figure>
+                        <div class="text">
+                            <h4>겨털소녀 김붕어</h4>
+                            <p class="info">
+                               <span class="nutshell">성장은 겨드랑이로부터</span> 
+                               <span class="time">7분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m8"><a href="#none">
+                        <figure>
+                            <img src="images/movie17.jpg" alt="아이들">
+                        </figure>
+                        <div class="text">
+                            <h4>아이들</h4>
+                            <p class="info">
+                               <span class="nutshell">이런 엄마도 있다</span> 
+                               <span class="time">68분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m9"><a href="#none">
+                        <figure>
+                            <img src="images/movie19.jpg" alt="비포 앤 애프터">
+                        </figure>
+                        <div class="text">
+                            <h4>비포 앤 애프터</h4>
+                            <p class="info">
+                               <span class="nutshell">타인의 눈으로 나를 조각한다</span> 
+                               <span class="time">8분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m10"><a href="#none">
+                        <figure>
+                            <img src="images/movie25.jpg" alt="강박">
+                        </figure>
+                        <div class="text">
+                            <h4>강박</h4>
+                            <p class="info">
+                               <span class="nutshell">약속해, 하루에 사과 한 개!</span> 
+                               <span class="time">12분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m11"><a href="#none">
+                        <figure>
+                            <img src="images/movie11.jpg" alt="면도">
+                        </figure>
+                        <div class="text">
+                            <h4>면도</h4>
+                            <p class="info">
+                               <span class="nutshell">함부로 하지 마세요!</span> 
+                               <span class="time">11분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </section>
+        <section class="movie_list movie_list2 wrap">
+            <h3>#<span>펖</span>ONLY_퍼플레이 아니면 못 봐요<span class="emoji">😎</span><img src="images/more.png" alt="더보기"></h3>
+            <div class="movie_frame">
+                <ul class="movie_slide">
+                    <li class="m5"><a href="#none">
+                        <figure>
+                            <img src="images/movie7.jpg" alt="푸르른 날에">
+                        </figure>
+                        <div class="text">
+                            <h4>푸르른 날에</h4>
+                            <p class="info">
+                               <span class="nutshell">1978년 그 공장에서는</span> 
+                               <span class="time">34분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie15.jpg" alt="사빈과 아나">
+                        </figure>
+                        <div class="text">
+                            <h4>사빈과 아나</h4>
+                            <p class="info">
+                               <span class="nutshell">a.k.a. 소울메이트</span> 
+                               <span class="time">10분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m8"><a href="#none">
+                        <figure>
+                            <img src="images/movie24.jpg" alt="혼자서">
+                        </figure>
+                        <div class="text">
+                            <h4>혼자서</h4>
+                            <p class="info">
+                               <span class="nutshell">어쩌면, 너도 겪었을 두려움</span> 
+                               <span class="time">4분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m9"><a href="#none">
+                        <figure>
+                            <img src="images/movie8.jpg" alt="박강아름의 가장무도회">
+                        </figure>
+                        <div class="text">
+                            <h4>박강아름의 가장무도회</h4>
+                            <p class="info">
+                               <span class="nutshell">늬들을 저격하는 외모실험</span> 
+                               <span class="time">93분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m6"><a href="#none">
+                        <figure>
+                            <img src="images/movie4.jpg" alt="마감일">
+                        </figure>
+                        <div class="text">
+                            <h4>마감일</h4>
+                            <p class="info">
+                               <span class="nutshell">슬기야 달려!</span> 
+                               <span class="time">28분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie10.jpg" alt="겨털소녀 김붕어">
+                        </figure>
+                        <div class="text">
+                            <h4>겨털소녀 김붕어</h4>
+                            <p class="info">
+                               <span class="nutshell">성장은 겨드랑이로부터</span> 
+                               <span class="time">7분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m8"><a href="#none">
+                        <figure>
+                            <img src="images/movie17.jpg" alt="아이들">
+                        </figure>
+                        <div class="text">
+                            <h4>아이들</h4>
+                            <p class="info">
+                               <span class="nutshell">이런 엄마도 있다</span> 
+                               <span class="time">68분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m9"><a href="#none">
+                        <figure>
+                            <img src="images/movie19.jpg" alt="비포 앤 애프터">
+                        </figure>
+                        <div class="text">
+                            <h4>비포 앤 애프터</h4>
+                            <p class="info">
+                               <span class="nutshell">타인의 눈으로 나를 조각한다</span> 
+                               <span class="time">8분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m10"><a href="#none">
+                        <figure>
+                            <img src="images/movie25.jpg" alt="강박">
+                        </figure>
+                        <div class="text">
+                            <h4>강박</h4>
+                            <p class="info">
+                               <span class="nutshell">약속해, 하루에 사과 한 개!</span> 
+                               <span class="time">12분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m11"><a href="#none">
+                        <figure>
+                            <img src="images/movie11.jpg" alt="면도">
+                        </figure>
+                        <div class="text">
+                            <h4>면도</h4>
+                            <p class="info">
+                               <span class="nutshell">함부로 하지 마세요!</span> 
+                               <span class="time">11분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m1"><a href="#none">
+                        <figure>
+                            <img src="images/movie1.jpg" alt="언프리티 영미">
+                        </figure>
+                        <div class="text">
+                            <h4>언프리티 영미</h4>
+                            <p class="info">
+                               <span class="nutshell">못생겨서 미안해yo!</span> 
+                               <span class="time">18분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m2"><a href="#none">
+                        <figure>
+                            <img src="images/movie2.jpg" alt="소설가 정연씨의 일일">
+                        </figure>
+                        <div class="text">
+                            <h4>소설가 정연씨의 일일</h4>
+                            <p class="info">
+                               <span class="nutshell">회사원 이치코로부터</span> 
+                               <span class="time">16분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie20.jpg" alt="할망바다"> 
+                        </figure>
+                        <div class="text">
+                            <h4>할망바다</h4>
+                            <p class="info">
+                               <span class="nutshell">바다의 커리어우먼</span> 
+                               <span class="time">5분</span>
+                            </p>
+                        </div>    
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m4"><a href="#none">
+                        <figure>
+                            <img src="images/movie3.jpg" alt="놀던 날">
+                        </figure>
+                        <div class="text">
+                            <h4>놀던 날</h4>
+                            <p class="info">
+                               <span class="nutshell">잘 됐으면 좋겠어, 우리</span> 
+                               <span class="time">26분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m5"><a href="#none">
+                        <figure>
+                            <img src="images/movie30.jpg" alt="잘돼가? 무엇이든">
+                        </figure>
+                        <div class="text">
+                            <h4>잘돼가? 무엇이든</h4>
+                            <p class="info">
+                               <span class="nutshell">나 이 회사 관둘거야</span> 
+                               <span class="time">36분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </section>
+        <section class="movie_list movie_list3 wrap">
+            <h3>퍼플레이어 최애작<span class="emoji">🥰</span><img src="images/more.png" alt="더보기"></h3>
+            <div class="movie_frame">
+                <ul class="movie_slide">
+                    <li class="m6"><a href="#none">
+                        <figure>
+                            <img src="images/movie4.jpg" alt="마감일">
+                        </figure>
+                        <div class="text">
+                            <h4>마감일</h4>
+                            <p class="info">
+                               <span class="nutshell">슬기야 달려!</span> 
+                               <span class="time">28분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie10.jpg" alt="겨털소녀 김붕어">
+                        </figure>
+                        <div class="text">
+                            <h4>겨털소녀 김붕어</h4>
+                            <p class="info">
+                               <span class="nutshell">성장은 겨드랑이로부터</span> 
+                               <span class="time">7분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m8"><a href="#none">
+                        <figure>
+                            <img src="images/movie17.jpg" alt="아이들">
+                        </figure>
+                        <div class="text">
+                            <h4>아이들</h4>
+                            <p class="info">
+                               <span class="nutshell">이런 엄마도 있다</span> 
+                               <span class="time">68분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m9"><a href="#none">
+                        <figure>
+                            <img src="images/movie19.jpg" alt="비포 앤 애프터">
+                        </figure>
+                        <div class="text">
+                            <h4>비포 앤 애프터</h4>
+                            <p class="info">
+                               <span class="nutshell">타인의 눈으로 나를 조각한다</span> 
+                               <span class="time">8분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m10"><a href="#none">
+                        <figure>
+                            <img src="images/movie25.jpg" alt="강박">
+                        </figure>
+                        <div class="text">
+                            <h4>강박</h4>
+                            <p class="info">
+                               <span class="nutshell">약속해, 하루에 사과 한 개!</span> 
+                               <span class="time">12분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m11"><a href="#none">
+                        <figure>
+                            <img src="images/movie11.jpg" alt="면도">
+                        </figure>
+                        <div class="text">
+                            <h4>면도</h4>
+                            <p class="info">
+                               <span class="nutshell">함부로 하지 마세요!</span> 
+                               <span class="time">11분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m2"><a href="#none">
+                        <figure>
+                            <img src="images/movie2.jpg" alt="소설가 정연씨의 일일">
+                        </figure>
+                        <div class="text">
+                            <h4>소설가 정연씨의 일일</h4>
+                            <p class="info">
+                               <span class="nutshell">회사원 이치코로부터</span> 
+                               <span class="time">16분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m4"><a href="#none">
+                        <figure>
+                            <img src="images/movie3.jpg" alt="놀던 날">
+                        </figure>
+                        <div class="text">
+                            <h4>놀던 날</h4>
+                            <p class="info">
+                               <span class="nutshell">잘 됐으면 좋겠어, 우리</span> 
+                               <span class="time">26분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </section>
+        <section class="movie_list movie_list4 wrap">
+            <h3>더위를 날려줄 여름맞이 특별sale<span class="emoji">🍉</span><img src="images/more.png" alt="더보기"></h3>
+            <div class="movie_frame">
+                <ul class="movie_slide">
+                    <li class="m6"><a href="#none">
+                        <figure>
+                            <img src="images/movie23.jpg" alt="여름">
+                        </figure>
+                        <div class="text">
+                            <h4>여름</h4>
+                            <p class="info">
+                               <span class="nutshell">더위를 피할 수 없다면</span> 
+                               <span class="time">3분</span>
+                            </p>
+                        </div>
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie15.jpg" alt="사빈과 아나">
+                        </figure>
+                        <div class="text">
+                            <h4>사빈과 아나</h4>
+                            <p class="info">
+                               <span class="nutshell">a.k.a. 소울메이트</span> 
+                               <span class="time">10분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m8"><a href="#none">
+                        <figure>
+                            <img src="images/movie24.jpg" alt="혼자서">
+                        </figure>
+                        <div class="text">
+                            <h4>혼자서</h4>
+                            <p class="info">
+                               <span class="nutshell">어쩌면, 너도 겪었을 두려움</span> 
+                               <span class="time">4분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m9"><a href="#none">
+                        <figure>
+                            <img src="images/movie9.jpg" alt="옆길">
+                        </figure>
+                        <div class="text">
+                            <h4>옆길</h4>
+                            <p class="info">
+                               <span class="nutshell">7일간의 서울 일주</span> 
+                               <span class="time">30분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m10"><a href="#none">
+                        <figure>
+                            <img src="images/movie12.jpg" alt="뮤트">
+                        </figure>
+                        <div class="text">
+                            <h4>뮤트</h4>
+                            <p class="info">
+                               <span class="nutshell">적막으로 도망가고 싶었어</span> 
+                               <span class="time">6분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m11"><a href="#none">
+                        <figure>
+                            <img src="images/movie14.jpg" alt="아역배우 박웅비">
+                        </figure>
+                        <div class="text">
+                            <h4>아역배우 박웅비</h4>
+                            <p class="info">
+                               <span class="nutshell">눈물이 뭐길래</span> 
+                               <span class="time">21분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m1"><a href="#none">
+                        <figure>
+                            <img src="images/movie5.jpg" alt="이상한 나라">
+                        </figure>
+                        <div class="text">
+                            <h4>이상한 나라</h4>
+                            <p class="info">
+                               <span class="nutshell">두렵고 부끄러워?</span> 
+                               <span class="time">8분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m2"><a href="#none">
+                        <figure>
+                            <img src="images/movie13.jpg" alt="개학">
+                        </figure>
+                        <div class="text">
+                            <h4>개학</h4>
+                            <p class="info">
+                               <span class="nutshell">개학 전에 낙태를 해야 한다</span> 
+                               <span class="time">19분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie18.jpg" alt="미쎄스 로맨스"> 
+                        </figure>
+                        <div class="text">
+                            <h4>미쎄스 로맨스</h4>
+                            <p class="info">
+                               <span class="nutshell">돈암동 낭만부인</span> 
+                               <span class="time">7분</span>
+                            </p>
+                        </div>   
+                        <span class="sale"></span> 
+                    </a></li>
+                    <li class="m4"><a href="#none">
+                        <figure>
+                            <img src="images/movie22.jpg" alt="무정">
+                        </figure>
+                        <div class="text">
+                            <h4>무정</h4>
+                            <p class="info">
+                               <span class="nutshell">미련은 방울방울?</span> 
+                               <span class="time">5분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m5"><a href="#none">
+                        <figure>
+                            <img src="images/movie21.jpg" alt="뱃속이 무거워서 꺼내야 했어">
+                        </figure>
+                        <div class="text">
+                            <h4>뱃속이 무거워서 꺼내야 했어</h4>
+                            <p class="info">
+                               <span class="nutshell">모녀대면</span> 
+                               <span class="time">11분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </section>
+        <section class="movie_list movie_list5 wrap">
+            <h3>#다이쏘_500원의 행복<span class="emoji">💰</span><img src="images/more.png" alt="더보기"></h3>
+            <div class="movie_frame">
+                <ul class="movie_slide">
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie36.jpg" alt="미쎄스 로맨스">
+                        </figure>
+                        <div class="text">
+                            <h4>미쎄스 로맨스</h4>
+                            <p class="info">
+                               <span class="nutshell">돈암동 낭만부인</span> 
+                               <span class="time">7분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie37.jpg" alt="씽크">
+                        </figure>
+                        <div class="text">
+                            <h4>씽크</h4>
+                            <p class="info">
+                               <span class="nutshell">우주가 숨겨줄거야</span> 
+                               <span class="time">7분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie35.jpg" alt="비 내리는 여자">
+                        </figure>
+                        <div class="text">
+                            <h4>비 내리는 여자</h4>
+                            <p class="info">
+                               <span class="nutshell">그대는 내 머리 위 우산</span> 
+                               <span class="time">10분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie10.jpg" alt="겨털소녀 김붕어">
+                        </figure>
+                        <div class="text">
+                            <h4>겨털소녀 김붕어</h4>
+                            <p class="info">
+                               <span class="nutshell">성장은 겨드랑이로부터</span> 
+                               <span class="time">7분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie6.jpg" alt="치마">
+                        </figure>
+                        <div class="text">
+                            <h4>치마</h4>
+                            <p class="info">
+                               <span class="nutshell">왜 여자는 무조건</span> 
+                               <span class="time">5분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie27.jpg" alt="비오는 날의 부침개">
+                        </figure>
+                        <div class="text">
+                            <h4>비오는 날의 부침개</h4>
+                            <p class="info">
+                               <span class="nutshell">90년대 원조 쿡방</span> 
+                               <span class="time">6분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m10"><a href="#none">
+                        <figure>
+                            <img src="images/movie12.jpg" alt="뮤트">
+                        </figure>
+                        <div class="text">
+                            <h4>뮤트</h4>
+                            <p class="info">
+                               <span class="nutshell">적막으로 도망가고 싶었어</span> 
+                               <span class="time">6분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m1"><a href="#none">
+                        <figure>
+                            <img src="images/movie5.jpg" alt="이상한 나라">
+                        </figure>
+                        <div class="text">
+                            <h4>이상한 나라</h4>
+                            <p class="info">
+                               <span class="nutshell">두렵고 부끄러워?</span> 
+                               <span class="time">8분</span>
+                            </p>
+                        </div>
+                        <span class="sale"></span>
+                    </a></li>
+                    <li class="m4"><a href="#none">
+                        <figure>
+                            <img src="images/movie22.jpg" alt="무정">
+                        </figure>
+                        <div class="text">
+                            <h4>무정</h4>
+                            <p class="info">
+                               <span class="nutshell">미련은 방울방울?</span> 
+                               <span class="time">5분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </section>
+        <section class="movie_list movie_list6 wrap">
+            <h3>지금 바로 볼 수 있는 무료영화<span class="emoji">⏳</span><img src="images/more.png" alt="더보기"></h3>
+            <div class="movie_frame">
+                <ul class="movie_slide">
+                    <li class="m6"><a href="#none">
+                        <figure>
+                            <img src="images/movie23.jpg" alt="여름">
+                        </figure>
+                        <div class="text">
+                            <h4>여름</h4>
+                            <p class="info">
+                               <span class="nutshell">더위를 피할 수 없다면</span> 
+                               <span class="time">3분</span>
+                            </p>
+                        </div>
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m6"><a href="#none">
+                        <figure>
+                            <img src="images/movie4.jpg" alt="마감일">
+                        </figure>
+                        <div class="text">
+                            <h4>마감일</h4>
+                            <p class="info">
+                               <span class="nutshell">슬기야 달려!</span> 
+                               <span class="time">28분</span>
+                            </p>
+                        </div>
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie20.jpg" alt="할망바다"> 
+                        </figure>
+                        <div class="text">
+                            <h4>할망바다</h4>
+                            <p class="info">
+                               <span class="nutshell">바다의 커리어우먼</span> 
+                               <span class="time">5분</span>
+                            </p>
+                        </div>    
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie16.jpg" alt="세마리"> 
+                        </figure>
+                        <div class="text">
+                            <h4>세마리</h4>
+                            <p class="info">
+                               <span class="nutshell">짝사랑은 추한 것 같아요</span> 
+                               <span class="time">36분</span>
+                            </p>
+                        </div>    
+                        <span class="free"></span>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </section>
+        <section class="movie_list movie_list7 wrap">
+            <h3>2020년 들꽃영화상 수상 여성영화인 참여 작품<span class="emoji">🌼</span><img src="images/more.png" alt="더보기"></h3>
+            <div class="movie_frame">
+                <ul class="movie_slide">
+                    <li class="m6"><a href="#none">
+                        <figure>
+                            <img src="images/movie4.jpg" alt="마감일">
+                        </figure>
+                        <div class="text">
+                            <h4>마감일</h4>
+                            <p class="info">
+                               <span class="nutshell">슬기야 달려!</span> 
+                               <span class="time">28분</span>
+                            </p>
+                        </div>
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie16.jpg" alt="세마리"> 
+                        </figure>
+                        <div class="text">
+                            <h4>세마리</h4>
+                            <p class="info">
+                               <span class="nutshell">짝사랑은 추한 것 같아요</span> 
+                               <span class="time">36분</span>
+                            </p>
+                        </div>    
+                        <span class="free"></span>
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie32.jpg" alt="나만 없는 집"> 
+                        </figure>
+                        <div class="text">
+                            <h4>나만 없는 집</h4>
+                            <p class="info">
+                               <span class="nutshell">둘째는 혼자 큰다</span> 
+                               <span class="time">33분</span>
+                            </p>
+                        </div>    
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie33.jpg" alt="모래"> 
+                        </figure>
+                        <div class="text">
+                            <h4>모래</h4>
+                            <p class="info">
+                               <span class="nutshell">부스럭거리는 욕망 아파트</span> 
+                               <span class="time">49분</span>
+                            </p>
+                        </div>    
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie34.jpg" alt="SFdrome: 주세죽"> 
+                        </figure>
+                        <div class="text">
+                            <h4>SFdrome: 주세죽</h4>
+                            <p class="info">
+                               <span class="nutshell">과거에서 쏘아올린 혁명로켓</span> 
+                               <span class="time">26분</span>
+                            </p>
+                        </div>    
+                    </a></li>
+                    <li class="m7"><a href="#none">
+                        <figure>
+                            <img src="images/movie27.jpg" alt="비오는 날의 부침개">
+                        </figure>
+                        <div class="text">
+                            <h4>비오는 날의 부침개</h4>
+                            <p class="info">
+                               <span class="nutshell">90년대 원조 쿡방</span> 
+                               <span class="time">6분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </section>
+        <section class="movie_list movie_list8 wrap">
+            <h3>전설의 90-00년대, 언니들의 영화<span class="emoji">📽️</span><img src="images/more.png" alt="더보기"></h3>
+            <div class="movie_frame">
+                <ul class="movie_slide">
+                    <li class="m6"><a href="#none">
+                        <figure>
+                            <img src="images/movie28.jpg" alt="우중산책">
+                        </figure>
+                        <div class="text">
+                            <h4>우중산책</h4>
+                            <p class="info">
+                               <span class="nutshell">기다리는 하루</span> 
+                               <span class="time">13분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie26.jpg" alt="고추말리기"> 
+                        </figure>
+                        <div class="text">
+                            <h4>고추말리기</h4>
+                            <p class="info">
+                               <span class="nutshell">K-여성삼대</span> 
+                               <span class="time">54분</span>
+                            </p>
+                        </div>    
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie29.jpg" alt="20세기를 기억하는 슬기롭고 지혜로운 방법"> 
+                        </figure>
+                        <div class="text">
+                            <h4>20세기를 기억하는 슬기롭고 지혜로운 방법</h4>
+                            <p class="info">
+                               <span class="nutshell">기억을 기록하는 여성작가들</span> 
+                               <span class="time">11분</span>
+                            </p>
+                        </div>    
+                    </a></li>
+                    <li class="m3"><a href="#none">
+                        <figure>
+                            <img src="images/movie31.jpg" alt="물안경"> 
+                        </figure>
+                        <div class="text">
+                            <h4>물안경</h4>
+                            <p class="info">
+                               <span class="nutshell">답답하기만 해</span> 
+                               <span class="time">34분</span>
+                            </p>
+                        </div>    
+                    </a></li>
+                    <li class="m5"><a href="#none">
+                        <figure>
+                            <img src="images/movie30.jpg" alt="잘돼가? 무엇이든">
+                        </figure>
+                        <div class="text">
+                            <h4>잘돼가? 무엇이든</h4>
+                            <p class="info">
+                               <span class="nutshell">나 이 회사 관둘거야</span> 
+                               <span class="time">36분</span>
+                            </p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="images/prev.png" alt="이전" class="prev">
+            <img src="images/next.png" alt="다음" class="next">
+        </section>
+    </div>
+    
+    <script src="js/mv_slide.js"></script>
+    <script src="js/ml_slide.js"></script>
+    
+    <footer>
+        <div class="wrap">
+            <div class="vision">
+                <p>우리는 믿습니다.<br>당신의 선택이 세상을 바꿀 거라고.<br>I'm ready to pay for feminist films!</p>
+            </div>
+            <div class="about">
+                <div class="law">
+                    <a href="#none"><span>이용약관</span></a>
+                    <a href="#none"><span>개인정보취급방침</span></a>
+                </div>
+                <address>
+                    <span>서울특별시 광진구 아차산로20길 26, 2층 106호</span>
+                    <span>주식회사: 퍼플레이컴퍼니</span>
+                    <span>대표: 조일지</span>
+                    <br>
+                    <span>광고/제휴문의: <a href="mailto:purplay@purplay.co.kr">purplay@purplay.co.kr</a></span>
+                    <span>&copy;2019 PURPLAY-company.</span>
+                    <span>본 페이지는 포트폴리오용 시안입니다.</span>
+                </address>
+            </div>
+            <div class="sns">
+                <a href="#none"><img src="images/blog.png" alt="블로그 바로가기"></a>
+                <a href="#none"><img src="images/facebook.png" alt="페이스북 바로가기"></a>
+                <a href="#none"><img src="images/instagram.png" alt="인스타그램 바로가기"></a>
+                <a href="#none"><img src="images/youtube.png" alt="유투브 바로가기"></a>
+                <a href="#none"><img src="images/twitter.png" alt="트위터 바로가기"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

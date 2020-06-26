@@ -1,0 +1,98 @@
+@font-face { font-family: 'LotteMartHappy'; font-style: normal; font-weight: 400; src: url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff'); }
+@font-face { font-family: 'BBTreeGL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGL.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+/*reset*/
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {vertical-align: top;}
+br {font-family: "맑은 고딕";}
+
+/*common*/
+html, body {width: 100%; height: 100%; font-family: 'LotteMartHappy';}
+.wrap {position: relative; margin: 0 auto; width: 95%;}
+.wrap:after, ul:after {content: ""; clear: both; display: block;}
+h2 {position: absolute; left: -9999px;}
+.noshow {display: none;}
+.emoji {font-family:apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol !important;}
+
+/*header.html*/
+header {position: fixed; z-index: 99; top:0; left:0; width: 100%; height: 50px; font-family: 'BBTreeGL';}
+header h1 {position: absolute; top:6px; left:50%; transform: translateX(-50%);}
+header img {width: 94px;}
+header .about {position: absolute; top:10px; left:0; }
+header .about li {float: left;}
+header .about li a {display: inline-block; margin-right: 10px;}
+header .about li a img {width: 28px;}
+header .util {position: absolute; top:18px; right:0;}
+header .util li {float: left;}
+header .util li a {display: inline-block; margin-left: 14px; color:#fff;}
+header .util li a img {position: relative; top:-4px; margin-right: 4px; width: 26px;}
+header .util li:first-child a img {top:-2px; width: 20px;}
+
+#main {position: relative;}
+#main .mv_wrap {position: relative; padding-bottom: 41.66%; width: 100%; height: 0;}
+#main #mv_slide {position: relative;}
+#main #mv_slide li {position: absolute; left:0; top:0; width: 100%; opacity: 0; transition: .5s;}
+#main #mv_slide li img {width: 100%;}
+#main #mv_slide li .video_wrap {position: relative; padding-bottom: 41.66%; width: 100%; height: 0;}
+#main #mv_slide li .video_wrap video {position: absolute; left:0; top:0; width: 100%; height: 100%;}
+#main #mv_slide li .video_wrap .wildflower {position: absolute; right:2%; top:68%; width: 16%;}
+#main #mv_slide li .video_wrap .gradient {position: absolute; left:0; top:0; width: 100%; opacity:0.7;}
+#main #mv_slide li .text {position: absolute; top:40%; left:2.5%; width: 80%; color:#fff;}
+#main #mv_slide li .text h3, #main #mv_slide li .text p, #main #mv_slide li .text a {position: relative; top:14px; opacity: 0;}
+#main #mv_slide li .text h3 {width: 100%; font-size: 64px; font-weight: normal; line-height: 1.2;}
+#main #mv_slide li .text p {margin: 12px 0 46px; font-size: 26px;}
+#main #mv_slide li .text a {display: inline-block; padding: 10px 12px; background: #312737; font-size: 24px; color:#fff;}
+#main #mv_slide li .text a:hover {background: #7d00fe;}
+#main #mv_slide li.show {opacity: 1; z-index: 2;}
+
+#main #mv_page {position: absolute; z-index: 3; bottom:12px; right:2.5%;}
+#main #mv_page li {display: block; float: left; margin: 0 6px; width: 16px; height: 16px; background: #84759a; border-radius: 100%; cursor: pointer; transition:0.5s;}
+/*#main #mv_page .select {width: 30px; background: #fff; border-radius: 20px;}*/
+#main .pageani {position: absolute; z-index: 3; bottom:30px; right:calc(2.5% + 6px);}
+#main .ani {position: relative; bottom: -18px; left:0; width: 16px; height: 16px; background: #fff; border-radius: 20px;}
+
+#main .mv_wrap > img {position: absolute; z-index: 3; top:50%; transform: translateY(-50%); opacity: 0; transition:.4s; cursor: pointer;}
+#main .mv_wrap .prev {left:1%;}
+#main .mv_wrap .next {right:1%;}
+
+
+#cont {padding-bottom: 60px; background: #181818;}
+#cont .movie_list {padding-top: 60px;}
+#cont .movie_list h3 {color:#fff; font-weight: normal; font-size: 28px; cursor: pointer;}
+#cont .movie_list h3:hover {color:#7d00fe;}
+#cont .movie_list h3 span {font-family: "맑은 고딕";}
+#cont .movie_list h3 img {position: relative; top:9px; left:5px;}
+#cont .movie_list .movie_frame {overflow: hidden; width: 100%;}
+#cont .movie_list .movie_slide {position: relative; margin-top: 24px;}
+#cont .movie_list .movie_slide li {float: left; padding-right: 10px; box-sizing: border-box;}
+#cont .movie_list .movie_slide li a {position: relative; display: block; color:#fff;}
+#cont .movie_list .movie_slide li a figure {overflow: hidden; width: 100%;}
+#cont .movie_list .movie_slide li a img {width: 100%; transition:.5s;}
+#cont .movie_list .movie_slide li a img:hover {transform: scale(1.2);}
+#cont .movie_list .movie_slide li a .text {position: relative;}
+#cont .movie_list .movie_slide li a h4 {overflow: hidden; margin: 24px 0 0 10px; width: 100%; font-weight: normal; font-size: 20px; white-space: nowrap; text-overflow: ellipsis;}
+#cont .movie_list .movie_slide li a .info {position: absolute; left:10px; top:-38px;}
+#cont .movie_list .movie_slide li a .info span {display: inline-block; padding: 6px 12px; border-radius: 100px;}
+#cont .movie_list .movie_slide li a .info .nutshell {background: #7d00fe;}
+#cont .movie_list .movie_slide li a .info .time {background: rgba(17, 17, 17, 0.5);}
+#cont .movie_list .movie_slide li a .sale, #cont .movie_list .movie_slide li a .free {position: absolute; top:0; right:0; width: 60px; height: 45px;}
+#cont .movie_list .movie_slide li a .sale {background: url(../images/sale.png) no-repeat top -1px right 4px;}
+#cont .movie_list .movie_slide li a .free {background: url(../images/free.png) no-repeat top -1px right 4px;}
+#cont .movie_list > img {position: absolute; z-index: 2; top:50%; margin-top: 2%; cursor: pointer;}
+#cont .movie_list .prev {left:-1.8%;}
+#cont .movie_list .next {right:-1.8%;}
+
+footer {padding: 60px 0; background: #312737;}
+footer .wrap {display: flex; align-items: center;}
+footer .vision, footer .about, footer .sns {flex-basis: 0;}
+footer .vision {flex-grow:2; margin-right: 100px; color:#fff; font-size: 18px; line-height: 1.8; word-break: keep-all;}
+footer .about {flex-grow:6;}
+footer .about, footer .about a, footer .about address {color:#707070; font-size: 14px; font-family: "맑은 고딕"; font-style: normal; line-height: 1.8;}
+footer .about span {display: inline-block; margin-right: 14px;}
+footer .about .law {margin-bottom: 8px; font-weight: bold;}
+footer .sns {flex-grow:2; display: flex; justify-content: space-between;}
+footer .sns a {display: inline-block; }
+footer .sns img {width: 90%;}
